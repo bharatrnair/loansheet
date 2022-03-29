@@ -14,34 +14,57 @@ function App() {
   return (
     <div className="App">
     <h1>LOAN APPLICATION : #XM4568520753159</h1>
-    <div className="mainForm">
-      <div className="sectionHeader">
+    <div className="container">
+      <div className="table-container">
+        <div className="table-heading-cell">
+          SL NO
+        </div>
+        <div className="table-heading-cell">
+          INVESTORS
+        </div>
+        <div className="table-heading-cell">
+          INTREST RATE
+        </div>
+        <div className="table-heading-cell">
+          SELECT PREFERENCE
+        </div>
+  { investorsList.map(({name,id,rate},index) =>
+     <InvestorRow key={id} name={name} rate={rate} index={index}/>)}
 
-        <p>SL NO</p>
-        <p>INVESTORS</p>
-        <p>INTEREST RATE</p>
-        <p>SELECT PREFERENCE</p>
-
-      </div>
-      {/* <div className="bodyPos">
-        <div className="investor1">
-          <p>1</p>
-          <p>INVESTOR 1</p>
-          <p>10%</p>
-           </div>
-      </div> */}
-
-
-    </div>
-   { investorsList.map(({name,id,rate},i) =>
-    <div className="investors-container" key={id}>
-      <div className="investor-id">{id}</div>
-      <div className="investor-name">{name}</div>
-      <div className="investor-rate">{rate}</div>
-      </div>)}
-    
-    </div>
+   </div>
+ </div>
+</div>
   );
+}
+
+const InvestorRow = ({name,rate,index}) => {
+  return (
+    <>
+
+    <div className="table-cell">
+      {index+1}
+    </div>
+    <div className="table-cell">
+      {name}
+    </div>
+    <div className="table-cell">
+      {rate}
+    </div>
+    <div className="table-cell">
+      <input type="radio"/>
+      <label htmlFor=''>
+        1st Option
+      </label>
+      <input type="radio"/>
+      <label htmlFor=''>
+        2nd Option
+      </label>
+    <input type="radio"/>
+    <label htmlFor=''>
+      3rd Option
+    </label>
+    </div>
+    </>)
 }
 
 export default App;

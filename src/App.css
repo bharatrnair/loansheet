@@ -1,17 +1,12 @@
-.sectionHeader{
-position: relative;
-width: 878px;
-height: 62px;
-left: 300px;
-/* top: 109px; */
-display: grid;
-grid-auto-flow: column;
-color: white;
-background: #2C3590;
-text-align: center;
-/*margin : 0 auto; */
-font-weight: bold;
+.container{
+  max-width:900px;
+  margin:0 auto;
+}
+
+.table-container{
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 3fr;
 }
 h1{
-  text-align: center;
+  text-align:center;
 }
