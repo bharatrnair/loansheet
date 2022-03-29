@@ -6,7 +6,14 @@
 .table-container{
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 3fr;
+  text-align: center;
 }
 h1{
   text-align:center;
 }
+.table-heading-cell{
+  background-color: #0817e7;
+  /* text-align: center; */
+  color: white;
+  padding: 10px 10px;
+} 
